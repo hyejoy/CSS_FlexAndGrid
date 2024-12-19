@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>CSS Flex</title>
+    <link rel="stylesheet" href="default.css" />
+    <style>
+      /* 화면 600px 이상되면 flex-container의 display를 flex로! **/
+      @media (min-width: 600px) {
+        .flex-container {
+          display: flex;
+        }
+
+        .flex-item {
+          flex: 1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flex-container">
+      <div class="flex-item">AAAAAAAAAAAAAAAAAAAAAAAAAAAA</div>
+      <div class="flex-item">BBBBBBBBBBBBB</div>
+      <div class="flex-item">CCCCCCCCCCCCCCCCCCCCCCC</div>
+    </div>
+  </body>
+</html>
