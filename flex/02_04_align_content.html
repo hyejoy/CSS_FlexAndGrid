@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="default.css" />
+    <style>
+      .flex-container {
+        width: 400px;
+        height: 400px;
+        display: flex;
+        flex-wrap: wrap;
+        /* flex-wrap: wrap으로 설정된 상태에서, 아이템들의 행이 2줄 이상 되었을때 수직축 방향 정렬을 결정*/
+        align-content: stretch;
+        align-content: flex-start;
+        align-content: flex-end;
+        align-content: space-between;
+        align-content: space-around;
+        align-content: space-evenly;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flex-container">
+      <div class="flex-item">AAAAAAAAAAAAAAAAAAAAAAAAAA</div>
+      <div class="flex-item">BBBB</div>
+      <div class="flex-item">CCCCCCCCCCCCCCC</div>
+    </div>
+  </body>
+</html>
