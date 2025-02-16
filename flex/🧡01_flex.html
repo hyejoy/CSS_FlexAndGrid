@@ -8,23 +8,23 @@
     <link rel="stylesheet" href="default.css" />
     <style>
       .flex-container {
-        display: flex;
-
-        /* 💚 flex-direction [main축의 방향 전환] */
+        display: flex; /* Flexbox 활성화 (부모 요소가 flex 컨테이너가 됨) */
+        /* 🏷️ flex-direction: 메인 축의 방향 설정 */
+        /* 기본값(row): 가로 정렬 (왼 → 오) */
         flex-direction: row;
+        /*  오른 → 왼  */
         /* flex-direction: row-reverse; */
+        /*  세로 정렬 (위 → 아래)   */
         /* flex-direction: column; */
-        /* flex-direction: column-reverse; */
+        /*  아래 → 위   */
 
-        /* 💚 flex-wrap [container 아이템 over시 줄바꿈 설정] */
-        flex-wrap: wrap;
-        /*nowrap : 뻐팅김 (over는 삐져나감) */
-        /*wrap : 다음줄로 자동 바뀜 */
-        /*wrap-revers : 윗줄로 자동바뀜 */
+        /* 🏷️ flex-wrap: 줄바꿈 설정  [container 아이템 over시 줄바꿈 설정] */
+        flex-wrap: wrap; /* 넘치면 다음 줄로 이동 */
+        /* nowrap; 넘쳐도 한 줄 유지 (기본값) */
+        /* wrap-reverse; 줄바꿈되지만 위쪽으로 쌓임 */
 
-        /* 💚 flex-flow [flex-direction, wrp 한꺼번에 설정하는 단축속성]  */
-        /* flex-flow: row wrap; 
-		flex-direction은 row, flex-wrap은 wrap */
+        /* 🏷️ flex-flow: 방향과 줄바꿈을 한 번에 설정 */
+        /* flex-flow: row wrap; (row + wrap 조합) */
       }
     </style>
   </head>

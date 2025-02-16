@@ -7,15 +7,20 @@
     <title>CSS Flex</title>
     <link rel="stylesheet" href="default.css" />
     <style>
-      /* 화면 600px 이상되면 flex-container의 display를 flex로! **/
+      /* 화면 600px 미만이되면 flex-container의 direction을 column로 **/
+      .flex-container {
+        display: flex;
+        flex-direction: column;
+      }
+
       @media (min-width: 600px) {
         .flex-container {
           display: flex;
+          flex-direction: row;
         }
-
-        .flex-item {
-          flex: 1;
-        }
+      }
+      .flex-item {
+        flex: 1;
       }
     </style>
   </head>
