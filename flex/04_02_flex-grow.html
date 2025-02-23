@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="default.css" />
+    <style>
+      .flex-container {
+        display: flex;
+      }
+      /*💚 flex-grow : 유연하게 늘리기
+        아이템이 flex-basis의 값보다 커질 수 있는지 결정하는 속성
+        flex-grow에는 숫자값이 들어가는데 몇이든 0보다 큰 값이 세팅이 되면
+        해당 아이템이 유연한(Flexible)박스로 변하고 원래의 크기보다 커지며 빈 공간을 메우게 됩니다.
+        기본값이 0이기 때문에, 따로 적용하기 전까지는 아이템이 늘어나지 않았던것임!
+     */
+      .flex-item {
+        /*flex-grow: 0*/ /*기본값*/
+        flex-grow: 1;
+      }
+      /*
+        flex-grow에서 셋팅된 숫자는 자신의 ddds크기보다 늘어난 여백의 비율로 보면됨! 
+      */
+      .hyejo:nth-child(1) {
+        flex-grow: 1;
+      }
+      .hyejo:nth-child(2) {
+        flex-grow: 2;
+      }
+      .hyejo:nth-child(3) {
+        flex-grow: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flex-container">
+      <div class="flex-item">AAAAAAAAAAAAAAAAAAAAAAAAAA</div>
+      <div class="flex-item">BBBB</div>
+      <div class="flex-item">CCCCCCCCCCCCCCC</div>
+    </div>
+    <div class="flex-container">
+      <div class="hyejo">AAAAAAAAAAAAAAAAAAAAAAAAAA</div>
+      <div class="hyejo">BBBB</div>
+      <div class="hyejo">CCCCCCCCCCCCCCC</div>
+    </div>
+    <div>
+      <hr />
+      <hr />
+      <hr />
+      <hr />
+      <hr />
+      <hr />
+      <div>화살표의 넓이를 flex-grow라고 보면됨!</div>
+      <img src="../image/flex-grow.png" />
+    </div>
+    <div>
+      <img src="../image/flex-grow2.png" />
+    </div>
+  </body>
+</html>

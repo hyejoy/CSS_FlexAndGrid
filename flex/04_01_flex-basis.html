@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="default.css" />
+    <style>
+      .flex-container {
+        display: flex;
+      }
+      /*💚 flex-basis : Flex 아이템의 기본크기 설정
+         flex-direction이 row일때는 너비, column일 때는 높이
+    */
+      .flex-item {
+        /*기본값*/
+        flex-basis: auto;
+        /*100px 값보다 작은 값은 100px로 넓힘 */
+        flex-basis: 100px;
+        /* width는 flex-basis와 다르게 어떤 경우에든 강제로 100px로 맞춤*/
+        /* width: 100px; */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flex-container">
+      <div class="flex-item">AAAAAAAAAAAAAAAAAAAAAAAAAA</div>
+      <div class="flex-item">BBBB</div>
+      <div class="flex-item">CCCCCCCCCCCCCCC</div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="default.css" />
+    <style>
+      .flex-container {
+        display: flex;
+      }
+      /*💚 flex-shrink : flex-grow와 쌍을 이루는 속성으로, flex-basis의 값보다 작아질 수 있는지 결정
+           flex-shirnk에는 숫자값이 들어가는데 몇이든 일단 0보다 큰 값이 세팅이되면 해당 아이템이 유연한 flexible 박스로 변하고 flex-basis보다 작아짐.
+           기본값이 1이기때문에 따로 세팅하지 않았어도 아이템이 flex-basis보다 작아질 수 있음!
+           간단히 설명하면 flex-grow는 늘어날때 몇대몇으로 늘어날건지,
+           flex-shirnk는 줄어들대 몇대몇으로 줄어들지를 의미한다.
+    */
+
+      /* flex-shrink 덕분에 컨테이너가 아무리 작아져도 첫번째 아이템은 찌그러지지않고 폭의 넓이를 유지함 */
+      .flex-item:nth-child(1) {
+        flex-shrink: 0;
+        flex-basis: 100px;
+        /* width: 100px; */
+      }
+      .flex-item:nth-child(2) {
+        flex-grow: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flex-container">
+      <div class="flex-item">AAA</div>
+      <div class="flex-item">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, sunt.
+      </div>
+    </div>
+  </body>
+</html>
