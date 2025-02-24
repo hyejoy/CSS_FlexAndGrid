@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="default.css" />
+    <style>
+      /* 💚 flex : grow, flex-shrink, flex-basis 를 한번에 쓸 수 있는 축약형 속성이다.
+            세 속성들은 서로 관련이 깊기때문에 축약형을 쓰는 편이 여러모로 편리하다.
+        */
+      .flex-container {
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      .flex-item {
+        /* 두개 명확한 차이 느껴보기 
+            첫번째는 flex grow :1 , shrink 1, basis 0%로 설정됨
+            두번째는 basis가 auto로 설정되면서, 각 width에 맞게 설정됨
+        */
+        /* flex: 1; */
+        flex: 1 1 auto;
+      }
+      .flex-item:nth-child(1) {
+        width: 20%;
+      }
+      .flex-item:nth-child(2) {
+        width: 60%;
+      }
+      .flex-item:nth-child(3) {
+        width: 20%;
+      }
+
+      .flex-item p {
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flex-container">
+      <!-- lorem -->
+      <div class="flex-item">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore nobis
+          quaerat nisi! Nihil dolorem deleniti nisi. Aliquam ducimus, explicabo
+          ex earum quaerat magnam dicta, rerum nam facilis eligendi provident
+          illum!
+        </p>
+      </div>
+      <div class="flex-item">BBBB</div>
+      <div class="flex-item">CCCCCC</div>
+      <div class="flex-item">DDDDDDDDDDDDD</div>
+    </div>
+  </body>
+</html>
