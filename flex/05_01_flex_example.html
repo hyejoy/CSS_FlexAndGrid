@@ -11,13 +11,14 @@
         */
       .flex-container {
         display: flex;
-        flex-wrap: wrap;
+        flex-wrap: wrap; /*줄바꿈*/
       }
 
       .flex-item {
         /* 두개 명확한 차이 느껴보기 
-            첫번째는 flex grow :1 , shrink 1, basis 0%로 설정됨
-            두번째는 basis가 auto로 설정되면서, 각 width에 맞게 설정됨
+            🏷 flex-basis : Flex 아이템의 기본크기 설정
+            flex : 1 ====>  flex grow :1 , shrink 1, basis 0%로 설정됨 
+            flex : 1 1 auto ====> basis가 auto로 설정되고, nth-child에 설정된 width에 맞게 크기가 맞춰짐
         */
         /* flex: 1; */
         flex: 1 1 auto;
