@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="default.css" />
+    <style>
+      .flex-container {
+        display: flex;
+        flex-direction: column;
+        border: 10px solid red;
+        /*화면 가득 채우기*/
+        min-height: 100vh;
+      }
+      .flex-item {
+        flex: 1 auto;
+      }
+
+      /*600 부터*/
+      @media (min-width: 600px) {
+        .flex-container {
+          flex-direction: row;
+          flex-wrap: wrap;
+        }
+        .flex-item {
+          width: 50%;
+          /* flex-grow : 0, basis : auto 
+          안유연하게 만들고, width따라감*/
+          flex: 0 auto;
+          /* flex-basis: 50%; */
+        }
+      }
+
+      /*900 부터*/
+      @media (min-width: 900px) {
+        .flex-item {
+          width: 30%;
+          flex-grow: 1;
+          /* flex-grow가 1, 그리고 flex-basis가 auto이므로, width만큼 늘어나는데, 부족한 공간은 flex-grow가 채워줌
+            따라서 3칸, 30*3 = 90이지만, flex-grow가 알아서 채워줌 */
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flex-container">
+      <div class="flex-item">AAAAAAAAAAAAA</div>
+      <div class="flex-item">BB</div>
+      <div class="flex-item">CCCCC</div>
+      <div class="flex-item">AAAAAAAAAAAAA</div>
+      <div class="flex-item">BB</div>
+      <div class="flex-item">CCCCC</div>
+      <div class="flex-item">AAAAAAAAAAAAA</div>
+      <div class="flex-item">BB</div>
+      <div class="flex-item">CCCCC</div>
+      <div class="flex-item">AAAAAAAAAAAAA</div>
+      <div class="flex-item">BB</div>
+      <div class="flex-item">CCCCC</div>
+      <div class="flex-item">AAAAAAAAAAAAA</div>
+      <div class="flex-item">BB</div>
+      <div class="flex-item">CCCCC</div>
+    </div>
+  </body>
+</html>
